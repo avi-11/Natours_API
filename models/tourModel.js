@@ -9,7 +9,7 @@ const tourSchema=mongoose.Schema({
         trim:true
         
     },
-    durations:{
+    duration:{
         type:Number,
         required:[true,"duration needed"]
     },
@@ -53,7 +53,8 @@ const tourSchema=mongoose.Schema({
     image:[String],
     createdAt:{
         type:Date,
-        default:Date.now()
+        default:Date.now(),
+        select:false
     },
     startDate:[Date],
     
